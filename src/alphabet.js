@@ -8,7 +8,7 @@ export default {
     Б: { lower: 'б', latin: 'Be' },
     В: { lower: 'в', latin: 'Ve' },
     Г: { lower: 'г', latin: 'Ge' },
-    Д: { lower: 'б', latin: 'Be' },
+    Д: { lower: 'б', latin: 'De' },
     Е: { lower: 'е', latin: 'Ye' },
     Ё: { lower: 'ё', latin: 'Yo' },
     Ж: { lower: 'ж', latin: 'Zhe' },
