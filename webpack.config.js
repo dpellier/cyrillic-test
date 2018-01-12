@@ -17,7 +17,7 @@ module.exports = function webpackConfig() {
 
     config.output = {
         path: outputPath,
-        publicPath: isLocal ? 'http://localhost:8081/' : '/',
+        publicPath: isLocal ? 'http://localhost:8081/' : '',
         filename: isLocal ? '[name].bundle.js' : '[name].[hash].js',
         chunkFilename: isLocal ? '[name].bundle.js' : '[name].[hash].js'
     };
