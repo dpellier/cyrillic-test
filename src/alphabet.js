@@ -1,0 +1,40 @@
+
+// А а	Б б	В в	Г  г	Д д	Е е	Ё ё	Ж ж	З з	И и	Й й
+// К к	Л л	М м	Н н	О о	П п	Р р	С с	Т т	У у	Ф ф
+// Х х	Ц ц	Ч ч	Ш ш	Щ щ	Ъ ъ	Ы ы	Ь ь	Э э	Ю ю	Я я
+
+export default {
+    А: { lower: 'а', latin: 'A' },
+    Б: { lower: 'б', latin: 'Be' },
+    В: { lower: 'в', latin: 'Ve' },
+    Г: { lower: 'г', latin: 'Ge' },
+    Д: { lower: 'б', latin: 'Be' },
+    Е: { lower: 'е', latin: 'Ye' },
+    Ё: { lower: 'ё', latin: 'Yo' },
+    Ж: { lower: 'ж', latin: 'Zhe' },
+    З: { lower: 'з', latin: 'Ze' },
+    И: { lower: 'и', latin: 'I' },
+    Й: { lower: 'й', latin: 'Y' },
+    К: { lower: 'к', latin: 'Ka' },
+    Л: { lower: 'л', latin: 'El' },
+    М: { lower: 'м', latin: 'Em' },
+    Н: { lower: 'н', latin: 'En' },
+    О: { lower: 'о', latin: 'O' },
+    П: { lower: 'п', latin: 'Pe' },
+    Р: { lower: 'р', latin: 'Er' },
+    С: { lower: 'с', latin: 'Es' },
+    Т: { lower: 'т', latin: 'Te' },
+    У: { lower: 'у', latin: 'U' },
+    Ф: { lower: 'ф', latin: 'Ef' },
+    Х: { lower: 'х', latin: 'Kha' },
+    Ц: { lower: 'ц', latin: 'Tse' },
+    Ч: { lower: 'ч', latin: 'Che' },
+    Ш: { lower: 'ш', latin: 'Shta'},
+    Щ: { lower: 'щ', latin: 'Sha'},
+    Ъ: { lower: 'ъ', latin: 'Jer'},
+    Ы: { lower: 'ы', latin: ''},
+    Ь: { lower: 'ь', latin: ''},
+    Э: { lower: 'э', latin: 'E'},
+    Ю: { lower: 'ю', latin: 'Yu'},
+    Я: { lower: 'я', latin: 'Ya'},
+}

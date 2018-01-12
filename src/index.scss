@@ -1,0 +1,92 @@
+
+$screen-phone: 568px;
+$element-width: 50px;
+
+$input-border: #8a8a8a;
+$button_background-color: #cacaca;
+$invalid-color: #f00;
+$valid-color: #32cd32;
+
+.alphabet {
+    margin: 40px;
+    font-family: arial;
+
+    &--submitted {
+        .alphabet__letter__response {
+            opacity: 1;
+        }
+    }
+
+    &__letter {
+        @media screen and (max-width: $screen-phone) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        display: inline-block;
+        margin: 20px;
+
+        &__label {
+            display: inline-block;
+            width: $element-width;
+            font-size: 20px;
+            flex: 1;
+        }
+
+        &__input {
+            border: solid 1px $input-border;
+            height: $element-width;
+            width: $element-width;
+            box-sizing: border-box;
+            outline: none;
+            padding: 0 5px;
+            transition: border-color ease .3s;
+
+            &:disabled {
+                background-color: lighten($input-border, 30);
+            }
+
+            &--invalid {
+                border-color: $invalid-color;
+            }
+
+            &--valid {
+                border-color: $valid-color;
+            }
+        }
+
+        &__response {
+            display: inline-block;
+            width: $element-width;
+            text-align: center;
+            opacity: 0;
+            transition: opacity ease .3s;
+            flex: 1;
+        }
+    }
+
+    &__submit {
+        text-align: center;
+
+        &__button {
+            background-color: $button_background-color;
+            border: 0;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color ease .3s;
+            outline: 0;
+
+            &:hover {
+                background-color: darken($button_background-color, 10);
+            }
+        }
+    }
+
+    &__result {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
