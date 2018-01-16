@@ -3,23 +3,22 @@ import './index.scss';
 import alphabet from './alphabet';
 
 function createLetterRow(letter) {
-    const letterObj = alphabet[letter];
-    const inputId = `letter-${letter}`;
+    const inputId = `letter-${letter.upper}`;
 
     const label = document.createElement('label');
     label.htmlFor = inputId;
-    label.innerText = `${letter} ${letterObj.lower}`;
+    label.innerText = `${letter.upper} ${letter.lower}`;
     label.classList.add('alphabet__letter__label');
 
     const input = document.createElement('input');
     input.id = inputId;
     input.autocomplete = 'off';
-    input.dataset.letter = letter;
-    input.disabled = letterObj.latin === '';
+    input.dataset.response = letter.latin;
+    input.disabled = letter.latin === '';
     input.classList.add('alphabet__letter__input');
 
     const response = document.createElement('span');
-    response.innerText = letterObj.latin;
+    response.innerText = letter.latin;
     response.classList.add('alphabet__letter__response');
 
     const container = document.createElement('div');
@@ -45,7 +44,7 @@ function validate(event) {
         input.classList.remove('alphabet__letter__input--valid');
         input.classList.remove('alphabet__letter__input--invalid');
 
-        if (!input.value || input.value.toLowerCase() !== alphabet[input.dataset.letter].latin.toLowerCase()) {
+        if (!input.value || input.value.toLowerCase() !== input.dataset.response.toLowerCase()) {
             input.classList.add('alphabet__letter__input--invalid');
         } else {
             input.classList.add('alphabet__letter__input--valid');
@@ -57,12 +56,20 @@ function validate(event) {
     result.innerHTML = `You scored: ${nbSuccess} / ${inputs.length}`;
 }
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 window.addEventListener('load', () => {
     const form = document.querySelector('#alphabet');
     const submit = document.querySelector('#submit');
     const fragment = document.createDocumentFragment();
 
-    Object.keys(alphabet).forEach((letter) => {
+    shuffleArray(alphabet);
+    alphabet.forEach((letter) => {
         fragment.appendChild(createLetterRow(letter));
     });
 
