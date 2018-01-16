@@ -27,7 +27,7 @@ export default [
     {upper: 'Ч', lower: 'ч', latin: 'Che' },
     {upper: 'Ш', lower: 'ш', latin: 'Sha'},
     {upper: 'Щ', lower: 'щ', latin: 'Scha'},
-    {upper: 'Ъ', lower: 'ъ', latin: 'Jer'},
+    {upper: '', lower: 'ъ', latin: ''},
     {upper: 'Ы', lower: 'ы', latin: ''},
     {upper: 'Ь', lower: 'ь', latin: ''},
     {upper: 'Э', lower: 'э', latin: 'é'},

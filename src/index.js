@@ -3,11 +3,11 @@ import './index.scss';
 import alphabet from './alphabet';
 
 function createLetterRow(letter) {
-    const inputId = `letter-${letter.upper}`;
+    const inputId = `letter-${letter.lower}`;
 
     const label = document.createElement('label');
     label.htmlFor = inputId;
-    label.innerText = `${letter.upper} ${letter.lower}`;
+    label.innerText = `${letter.upper} ${letter.lower}`.trim();
     label.classList.add('alphabet__letter__label');
 
     const input = document.createElement('input');
